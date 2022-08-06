@@ -1,0 +1,46 @@
+<form (ngSubmit)="postData()">
+    <div class="page">
+        <div class="field field_v1">
+            <label for="first-name" class="ha-screen-reader">Product Name</label>
+            <input id="first-name" class="field__input" placeholder="e.g. Maggie" type="text" name="productName" [(ngModel)]="productName"/>
+            <span class="field__label-wrap" aria-hidden="true">
+                <span class="field__label">Product Name</span>
+            </span>
+        </div>
+        <div class="field field_v2">
+            <label for="last-name" class="ha-screen-reader">Price of product</label>
+            <input id="last-name" class="field__input" placeholder="e.g. 300" type="text" 
+            name="productPrice" [(ngModel)]="productPrice"/>
+            <span class="field__label-wrap" aria-hidden="true">
+                <span class="field__label">Price of product</span>
+            </span>
+        </div>
+        <div class="field field_v2">
+            <label for="last-name" class="ha-screen-reader">Description</label>
+            <input id="first-name" class="field__input" placeholder="e.g. Maggie" type="text" 
+            name="Description" [(ngModel)]="Description"/>
+            <span class="field__label-wrap" aria-hidden="true">
+                <span class="field__label">Description</span>
+            </span>
+        </div>
+    </div>
+
+    <div class="Neon Neon-theme-dragdropbox">
+        <input
+            style="z-index: 999; opacity: 0; width: 320px; height: 200px; position: absolute; right: 0px; left: 0px; margin-right: auto; margin-left: auto;"
+            name="files[]" id="filer_input2" multiple="multiple" type="file" (change)="onFileChange($event)">
+        <div class="Neon-input-dragDrop">
+            <div class="Neon-input-inner">
+                <div class="Neon-input-icon"><i class="fa fa-file-image-o"></i></div>
+                <div class="Neon-input-text">
+                    <h3>Drag&amp;Drop files here</h3> <span style="display:inline-block; margin: 15px 0">or</span>
+                </div><a class="Neon-input-choose-btn blue">Browse Files</a>
+            </div>
+        </div>
+    </div>
+
+
+    <button>Upload</button>
+
+</form> 
+

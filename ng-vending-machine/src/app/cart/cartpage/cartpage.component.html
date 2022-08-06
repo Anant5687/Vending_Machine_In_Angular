@@ -1,0 +1,27 @@
+<main>
+    <div class="album py-5">
+        <div class="container">
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                <div class="col" *ngFor="let item of apiData">
+                    <div class="card shadow-sm">
+                        <img src={{item.image}} alt="img" style="height: 350px; width: 250px;" />
+                        <div class="card-body">
+                            <p class="card-text">{{item.description}}.</p>
+                            <p class="card-text"><b>{{item.name}}.</b></p>
+                            <p class="card-text"><b>{{item.price}} Rs.</b></p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <button type="button" style=" color:red" (click)="clearOneItem(item.id)"
+                                        class="btn btn-sm btn-outline-secondary">Remove from cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <button mat-button (click)="clearAllCart()" style="height:7vh; width:8vw; margin-left: 85%; background-color: red; color:white;">
+        Book All Cart
+    </button>
+</main>
